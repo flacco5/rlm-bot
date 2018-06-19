@@ -1,10 +1,26 @@
 {
-  "name": "RLM BOT",
-  "version": "",
+  "name": "rlm-agent",
+  "version": "1.0.0",
+  "description": "rlm twitter bot",
   "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flacco5/rlm-bot.git"
+  },
+  "author": "Randy Marsh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flacco5/rlm-bot/issues"
+  },
+  "homepage": "https://github.com/flacco5/rlm-bot#readme",
   "dependencies": {
-    "express": "^4.16.3",
     "request-promise": "^4.2.2",
-    "twit": "^2.2.9"
+    "twit": "^2.2.10"
+  },
+  "engines": {
+    "node": "8.0.0"
   }
 }

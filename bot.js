@@ -1,4 +1,3 @@
-const request = require(`request`);
 const rp      = require(`request-promise`);
 const twit    = require(`twit`);
 const config  = require(`./config.js`);
@@ -17,7 +16,7 @@ const actionApi = {
 	json: true
 }
 
-var minutes = 60
+var minutes = 1
 , the_interval = minutes * 60 * 1000;
 setInterval(function() {
 	console.log("I am doing my 60 minutes check");
@@ -125,7 +124,6 @@ setInterval(function() {
 				body.push(`${rlmTotals[i].type} in ${rlmTotals[i].game}`)
 			}
 		const tweet = body.join("\n");
-		console.log(tweet)
 		//Twitter section ====================================
 
 		var Twitter = new twit(config);
