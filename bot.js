@@ -16,10 +16,6 @@ const actionApi = {
 	json: true
 }
 
-var minutes = 1
-, the_interval = minutes * 60 * 1000;
-setInterval(function() {
-	console.log("I am doing my 60 minutes check");
 //home team, away team, opening odds, and closing odds API pul
 		rp(actionApi)
 			.then((data) => { 
@@ -139,4 +135,3 @@ setInterval(function() {
 		.catch((err) => {
 			console.log(err);
 		});
-}, the_interval);
