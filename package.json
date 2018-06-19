@@ -1,0 +1,10 @@
+{
+  "name": "RLM BOT",
+  "version": "",
+  "main": "bot.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "request-promise": "^4.2.2",
+    "twit": "^2.2.9"
+  }
+}
