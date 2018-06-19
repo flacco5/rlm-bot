@@ -28,7 +28,7 @@ const actionApi = {
 		const rlmTotals = [];
 
 
-		const games = data.games
+		const games = data.games;
 
 			games.forEach((games) => {
 					
