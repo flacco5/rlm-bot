@@ -128,7 +128,11 @@ const actionApi = {
 			status: `${tweet}` 
 		}, 
 		function(err, data, response) {
-				console.log(data.text)
+				if (err) {
+					console.log(err)
+				} else {
+					console.log(`LOOK WHAT I FOUND!\n${tweet}`)
+				}
 			})
 		delete tweet; 
 	})
