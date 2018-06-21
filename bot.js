@@ -17,15 +17,15 @@ const actionApi = {
 }
 
 //home team, away team, opening odds, and closing odds API pul
-		rp(actionApi)
+	rp(actionApi)
 			.then((data) => { 
 
 		const homeTeam  = [];  //home team name
 		const awayTeam  = [];  //away team name
 		const openOdds  = [];  //opening odds
 		const currOdds  = [];  //current odds
-		const mergRecs  = [];
-		const rlmTotals = [];
+		const mergRecs  = []; //consolidate into manageable record
+		const rlmTotals = []; //bets 
 
 
 		const games = data.games;
@@ -128,14 +128,14 @@ const actionApi = {
 			status: `${tweet}` 
 		}, 
 		function(err, data, response) {
-				if (err) {
-					console.log(err)
-				} else {
+			if (err) {
+				console.log(err)
+			} else {
 					console.log(`LOOK WHAT I FOUND!\n${tweet}`)
-				}
-			})
+			}
+		})
 		delete tweet; 
 	})
-		.catch((err) => {
-			console.log(err);
-		});
+	.catch((err) => {
+		console.log(err);
+	});
