@@ -121,8 +121,8 @@ const actionApi = {
 			for (var i = 0; i < rlmTotals.length; i++) {
 				body.push(`${rlmTotals[i].type} in ${rlmTotals[i].game}`)
 			}
-		//const tweet = body.join("\n");
-		const tweet = 'test'
+		const tweet = body.join("\n");
+		console.log(tweet);
 		//Twitter section ====================================
 
 		var Twitter = new twit(config);
