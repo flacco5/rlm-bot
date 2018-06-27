@@ -96,14 +96,15 @@ const actionApi = {
 				}
 			for (var i = 0; i < mergRecs.length; i++) { //RLM is to bet the under
 				if (mergRecs[i].openHomeTotal > mergRecs[i].currHomeTotal && mergRecs[i].totalOverBets > 50) {
-					rlmTotals.push({type: "Take the Under", game: `${mergRecs[i].homeTeam}vs${mergRecs[i].awayTeam}`})
+					rlmTotals.push({type: "Under", game: `${mergRecs[i].homeTeam}vs${mergRecs[i].awayTeam} OL:${mergRecs[i].openHomeTotal} CL:${mergRecs[i].currHomeTotal} U%:${mergRecs[i].totalOverBets} O%:${mergRecs[i].totalUnderBets}`})
 				}
 			} 
 			for (var i = 0; i < mergRecs.length; i++) { //RLM is to bet the over 
 				if (mergRecs[i].openHomeTotal < mergRecs[i].currHomeTotal && mergRecs[i].totalUnderBets > 50) {
-					rlmTotals.push({type: "Take the Over", game: `${mergRecs[i].homeTeam}vs${mergRecs[i].awayTeam}`})
+					rlmTotals.push({type: "Over", game: `${mergRecs[i].homeTeam}vs${mergRecs[i].awayTeam} OL:${mergRecs[i].openHomeTotal} CL:${mergRecs[i].currHomeTotal} U%:${mergRecs[i].totalOverBets} O%:${mergRecs[i].totalUnderBets}`})
 				}
 			}
+			/*
 			for (var i = 0; i < mergRecs.length; i++) { //RLM is to bet spread home
 				if (mergRecs[i].openHomeSpread < mergRecs[i].currHomeSpread && mergRecs[i].spreadAwayBets > 50) {
 					rlmTotals.push({type: `Take ${mergRecs[i].homeTeam}`, game: `${mergRecs[i].homeTeam}vs${mergRecs[i].awayTeam}`})
@@ -114,6 +115,7 @@ const actionApi = {
 					rlmTotals.push({type: `Take ${mergRecs[i].awayTeam}`, game: `${mergRecs[i].homeTeam}vs${mergRecs[i].awayTeam}`})
 				}
 			}
+			*/
 
 		const body = [];
 			for (var i = 0; i < rlmTotals.length; i++) {
