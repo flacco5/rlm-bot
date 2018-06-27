@@ -127,7 +127,7 @@ const actionApi = {
 		var Twitter = new twit(config);
 
 		Twitter.post('statuses/update', { 
-			status: `${tweet}` 
+			status: `test` 
 		}, 
 		function(err, data, response) {
 			if (err) {
